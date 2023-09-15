@@ -20,7 +20,7 @@ body {
 .result-container {
   background-color: rgb(48, 48, 48);
   display: flex;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   align-items: center;
   position: relative;
   font-size: 18px;
@@ -28,6 +28,7 @@ body {
   padding: 12px 10px;
   height: 50px;
   width: 100%;
+  border-radius: 12px;
 }
 #result {
   word-wrap: break-word;
@@ -35,19 +36,86 @@ body {
 }
 #copy-btn {
   font-size: 20px;
-  background-color: ;
+  background-color: black;
   position: absolute;
   top: 5px;
   right: 5px;
   height: 40px;
   width: 40px;
+  border-radius: 8px;
 }
-
-.btn {
-  border: none;
+.setting {
+  display: flex;
+  margin: 15px;
+}
+input[type="number"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  margin-right: 20px;
+  font: inherit;
+  color: black;
+  width: 2.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 3px;
+  transform: translateY(-0.075em);
+  place-content: center;
+}
+input[type="number"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-color: CanvasText;
+  transform-origin: bottom left;
+}
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  margin-right: 20px;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-color: CanvasText;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+#GBTN {
+  text-align: center;
+  background: linear-gradient(to bottom, rgb(26, 26, 26), black);
   color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  padding: 8px 12px;
-  background-color: #3b3b98;
+  border: none;
+  box-shadow: 2px 2px 2px rgb(41, 41, 41);
+  font-size: 30px;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+#GBTN:hover {
+  background: linear-gradient(to bottom, black, rgb(26, 26, 26));
+  box-shadow: 2px 2px 2px black;
+}
+.GBTNdiv {
+  text-align: center;
+  margin: 30px auto;
 }
